@@ -14,7 +14,13 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "tsconfigRootDir": ".",
-        "project": "./src/tsconfig.app.json"
+        "project": [
+            "./src/tsconfig.app.json",
+            "./src/tsconfig.spec.json"
+        ],
+        "extraFileExtensions": [
+            "html"
+        ]
     },
     "plugins": [
         "@typescript-eslint"
