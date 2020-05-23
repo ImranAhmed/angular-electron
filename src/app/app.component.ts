@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { AppConfig } from '../environments/environment';
 import { ElectronService } from './core/services';
-import { LoggingService } from './shared/services/logging.service';
+import { LoggingService } from './shared/services';
 
 @Component({
   selector: 'app-root',

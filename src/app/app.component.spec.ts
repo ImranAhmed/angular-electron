@@ -4,8 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
 import { ElectronService } from './core/services';
-import { LoggingMockService } from './shared/services/logging-mock.service';
-import { LoggingService } from './shared/services/logging.service';
+import { LoggingMockService, LoggingService } from './shared/services';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
