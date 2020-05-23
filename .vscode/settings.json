@@ -10,7 +10,9 @@
     "**/dist": true,
     "**/node_modules": true
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true
-  }
+  "eslint.validate": [
+    "typescript",
+    "javascript",
+    "html"
+  ]
 }

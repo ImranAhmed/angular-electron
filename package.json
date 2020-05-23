@@ -1,11 +1,10 @@
 {
   "name": "angular-electron",
-  "version": "7.1.0",
+  "version": "0.0.1",
   "description": "Angular 9 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "homepage": "https://github.com/ImranAhmed/angular-electron",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "Imran Ahmed"
   },
   "keywords": [
     "angular",
@@ -40,7 +39,7 @@
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "9.1.0",
-    "@angular-devkit/build-angular": "0.901.4",
+    "@angular-devkit/build-angular": "0.901.7",
     "@angular-eslint/builder": "0.0.1-alpha.18",
     "@angular/cli": "9.1.4",
     "@angular/common": "9.1.4",
@@ -62,7 +61,7 @@
     "@typescript-eslint/parser": "2.27.0",
     "chai": "4.2.0",
     "codelyzer": "5.2.2",
-    "conventional-changelog-cli": "2.0.32",
+    "conventional-changelog-cli": "2.0.34",
     "core-js": "3.6.5",
     "cross-env": "7.0.2",
     "devtron": "1.4.0",
