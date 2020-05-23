@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { PageNotFoundComponent } from './components';
-import { WebviewDirective } from './directives';
 import { LoggingService } from './services';
 import { ElectronService } from './services/electron/electron.service';
 
 @NgModule({
-  declarations: [PageNotFoundComponent, WebviewDirective],
+  declarations: [PageNotFoundComponent],
   imports: [CommonModule, TranslateModule, FormsModule],
-  exports: [TranslateModule, WebviewDirective, FormsModule],
+  exports: [TranslateModule, FormsModule],
   providers: [
     ElectronService,
     LoggingService

@@ -3,8 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
-import { ElectronService } from './core/services';
-import { LoggingMockService, LoggingService } from './shared/services';
+import { ElectronService, LoggingMockService, LoggingService } from './shared/services';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

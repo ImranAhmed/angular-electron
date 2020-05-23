@@ -9,7 +9,7 @@ describe('LoggingService', () => {
 
   beforeAll(() => {
     const clientUrl = 'http://localhost:9876/context.html';
-    const { version: appVersion } = require('../../../../package.json');
+    const { version: appVersion } = require('../../../../../package.json');
     commonLogMessage = `; (appVersion: ${appVersion}, clientUrl: ${clientUrl})`;
   });
 
