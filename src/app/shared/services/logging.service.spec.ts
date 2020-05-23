@@ -30,7 +30,7 @@ describe('LoggingService', () => {
   }));
 
 
-  const logLevelTests = (level: string) => {
+  const logLevelTests = (level: string): void => {
     describe(level.toLowerCase(), () => {
       let method: any;
       let message: string;

@@ -4,12 +4,12 @@ import * as _ from 'lodash';
 
 export class ClassUtilities {
 
-    public static getClassNameFor = (instance: any): string => {
+    public static getClassNameFor = (instance: unknown): string => {
         let name: string;
 
         const constructor = instance && instance.constructor ? instance.constructor : undefined;
         if (constructor) {
-            name = (constructor as any).name;
+            name = (constructor).name;
         }
         if (_.isNil(name)) {
             if (constructor) {
@@ -27,6 +27,7 @@ export class ClassUtilities {
             return undefined;
         }
 
+        // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
         const matches = source.match(/function +(\S+) *\(/);
 
         if (!matches || matches.length < 2) {

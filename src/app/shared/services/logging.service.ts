@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint no-console: 0 */
 import { Injectable } from '@angular/core';
 
@@ -85,7 +86,7 @@ export class LoggingService implements LoggingServiceInterface {
   }
 
 
-  private log = (logger: any, level: number, logObject: any) => {
+  private log = (logger: any, level: number, logObject: any): void => {
     const loggerName = this.getLoggerName(logger);
     if (typeof logObject === 'string') {
       logObject = `${loggerName}: ${logObject}; (appVersion: ${application.version}, clientUrl: ${location.href})`;
