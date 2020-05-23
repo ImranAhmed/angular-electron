@@ -12,7 +12,6 @@
   },
   "eslint.validate": [
     "typescript",
-    "javascript",
-    "html"
+    "javascript"
   ]
 }

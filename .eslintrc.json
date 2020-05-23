@@ -17,9 +17,6 @@
         "project": [
             "./src/tsconfig.app.json",
             "./src/tsconfig.spec.json"
-        ],
-        "extraFileExtensions": [
-            ".html"
         ]
     },
     "plugins": [
