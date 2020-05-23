@@ -2,9 +2,9 @@
 /* eslint no-console: 0 */
 import { Injectable } from '@angular/core';
 
-import { application } from '../../../environments/application';
-import { AppConfig } from '../../../environments/environment';
-import { ClassUtilities } from '../helpers/class-utilities';
+import { application } from '../../../../environments/application';
+import { AppConfig } from '../../../../environments/environment';
+import { ClassUtilities } from '../../helpers/class-utilities';
 
 
 const getLogLevel = (logLevel: string): number => {

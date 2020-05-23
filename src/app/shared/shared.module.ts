@@ -6,11 +6,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PageNotFoundComponent } from './components';
 import { WebviewDirective } from './directives';
 import { LoggingService } from './services';
+import { ElectronService } from './services/electron/electron.service';
 
 @NgModule({
   declarations: [PageNotFoundComponent, WebviewDirective],
   imports: [CommonModule, TranslateModule, FormsModule],
   exports: [TranslateModule, WebviewDirective, FormsModule],
-  providers: [LoggingService]
+  providers: [
+    ElectronService,
+    LoggingService
+  ]
 })
 export class SharedModule { }
