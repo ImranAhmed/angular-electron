@@ -102,7 +102,7 @@ describe('LoggingService', () => {
           service[level.toLocaleLowerCase()](this, message);
 
           // Assert
-          expect(logSpy).toHaveBeenCalledWith(`: ${message}${commonLogMessage}`);
+          expect(logSpy).toHaveBeenCalledWith(`Object: ${message}${commonLogMessage}`);
         }));
     });
   };
