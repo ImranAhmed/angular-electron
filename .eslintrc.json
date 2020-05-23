@@ -19,7 +19,7 @@
             "./src/tsconfig.spec.json"
         ],
         "extraFileExtensions": [
-            "html"
+            ".html"
         ]
     },
     "plugins": [
