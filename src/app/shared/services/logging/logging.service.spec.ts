@@ -9,6 +9,7 @@ describe('LoggingService', () => {
 
   beforeAll(() => {
     const clientUrl = 'http://localhost:9876/context.html';
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { version: appVersion } = require('../../../../../package.json');
     commonLogMessage = `; (appVersion: ${appVersion}, clientUrl: ${clientUrl})`;
   });
@@ -32,6 +33,7 @@ describe('LoggingService', () => {
 
   const logLevelTests = (level: string): void => {
     describe(level.toLowerCase(), () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let method: any;
       let message: string;
 
