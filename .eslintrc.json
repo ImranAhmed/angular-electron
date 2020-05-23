@@ -38,6 +38,7 @@
         "@typescript-eslint/no-empty-function": 2,
         "@typescript-eslint/no-empty-interface": 0,
         "@typescript-eslint/no-explicit-any": 1,
+        "@typescript-eslint/no-extra-semi": 2,
         "@typescript-eslint/no-var-requires": 1,
         "@typescript-eslint/no-extra-parens": 2,
         "@typescript-eslint/no-for-in-array": 2,
