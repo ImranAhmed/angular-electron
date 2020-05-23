@@ -50,13 +50,6 @@ export class LoggingService implements LoggingServiceInterface {
     this.configure();
   }
 
-  private configure(): void {
-    this.debugLevel = getLogLevel('DEBUG');
-    this.infoLevel = getLogLevel('INFO');
-    this.warnLevel = getLogLevel('WARN');
-    this.errorLevel = getLogLevel('ERROR');
-    this.fatalLevel = getLogLevel('FATAL');
-  }
   public debug(logger: any, logObject: object | string): void {
     this.log(logger, this.debugLevel, logObject);
   }
@@ -73,7 +66,15 @@ export class LoggingService implements LoggingServiceInterface {
     this.log(logger, this.fatalLevel, logObject);
   }
 
-  private getLoggerName = (logger: any): string => {
+  private configure(): void {
+    this.debugLevel = getLogLevel('DEBUG');
+    this.infoLevel = getLogLevel('INFO');
+    this.warnLevel = getLogLevel('WARN');
+    this.errorLevel = getLogLevel('ERROR');
+    this.fatalLevel = getLogLevel('FATAL');
+  }
+
+  private readonly getLoggerName = (logger: any): string => {
     let loggerName = '';
     if (logger) {
       if (typeof logger === 'string') {
@@ -86,7 +87,7 @@ export class LoggingService implements LoggingServiceInterface {
   }
 
 
-  private log = (logger: any, level: number, logObject: any): void => {
+  private readonly log = (logger: any, level: number, logObject: any): void => {
     const loggerName = this.getLoggerName(logger);
     if (typeof logObject === 'string') {
       logObject = `${loggerName}: ${logObject}; (appVersion: ${application.version}, clientUrl: ${location.href})`;

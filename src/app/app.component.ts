@@ -12,8 +12,8 @@ import { ElectronService, LoggingService } from './shared/services';
 export class AppComponent {
   constructor(
     public electronService: ElectronService,
-    private translate: TranslateService,
-    private logger: LoggingService
+    private readonly translate: TranslateService,
+    private readonly logger: LoggingService
   ) {
     this.translate.setDefaultLang('en');
     this.logger.info(this, `AppConfig:${JSON.stringify(AppConfig)}`);

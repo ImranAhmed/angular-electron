@@ -9,7 +9,7 @@ export class ClassUtilities {
 
         const constructor = instance && instance.constructor ? instance.constructor : undefined;
         if (constructor) {
-            name = (constructor).name;
+            name = constructor.name;
         }
         if (_.isNil(name)) {
             if (constructor) {
