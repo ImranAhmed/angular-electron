@@ -19,13 +19,12 @@ function createWindow(): BrowserWindow {
     height: size.height,
     webPreferences: {
       nodeIntegration: true,
-      allowRunningInsecureContent: (serve) ? true : false,
+      allowRunningInsecureContent: (serve) ? true : false
     },
   });
 
   if (serve) {
 
-    require('devtron').install();
     win.webContents.openDevTools();
 
     require('electron-reload')(__dirname, {
