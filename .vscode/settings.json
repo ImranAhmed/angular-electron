@@ -1,9 +1,5 @@
 {
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "editor.formatOnSave": true,
-  "editor.formatDocument": true,
-  "html.format.indentInnerHtml": true,
-  "html.format.wrapAttributes": "aligned-multiple",
   "typescriptHero.imports.organizeOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "search.exclude": {
@@ -11,8 +7,23 @@
     "**/dist": true,
     "**/node_modules": true
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "eslint.validate": [
     "typescript",
     "javascript"
-  ]
+  ],
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  }
 }

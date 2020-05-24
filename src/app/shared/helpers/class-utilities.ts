@@ -1,9 +1,6 @@
 import * as _ from 'lodash';
 
-
-
 export class ClassUtilities {
-
     public static getClassNameFor = (instance: unknown): string => {
         let name: string;
 
@@ -17,12 +14,11 @@ export class ClassUtilities {
             }
         }
         return name;
-    }
+    };
     /*
         This is necessary because IE does not support the name property
     */
     public static getClassNameFromSource = (source: string): string => {
-
         if (_.isNil(source)) {
             return undefined;
         }
@@ -36,6 +32,5 @@ export class ClassUtilities {
 
         const name = matches[1];
         return name ? name : undefined;
-    }
-
+    };
 }

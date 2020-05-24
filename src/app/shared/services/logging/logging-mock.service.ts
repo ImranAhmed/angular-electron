@@ -4,10 +4,8 @@ import { Injectable } from '@angular/core';
 
 import { LoggingServiceInterface } from './logging.service';
 
-
 @Injectable()
 export class LoggingMockService implements LoggingServiceInterface {
-
     public loggerName: string;
     traceLevel: number;
     debugLevel: number;
@@ -17,18 +15,13 @@ export class LoggingMockService implements LoggingServiceInterface {
     fatalLevel: number;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public debug(logger: any, logObject: object | string): void {
-    }
+    public debug(logger: any, logObject: object | string): void {}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public info(logger: any, logObject: object | string): void {
-    }
+    public info(logger: any, logObject: object | string): void {}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public warn(logger: any, logObject: object | string): void {
-    }
+    public warn(logger: any, logObject: object | string): void {}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public error(logger: any, logObject: object | string): void {
-    }
+    public error(logger: any, logObject: object | string): void {}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public fatal(logger: any, logObject: object | string): void {
-    }
+    public fatal(logger: any, logObject: object | string): void {}
 }

@@ -1,5 +1,5 @@
 export const AppConfig = {
-  production: false,
-  environment: 'LOCAL',
-  logLevel: 'ALL'
+    production: false,
+    environment: 'LOCAL',
+    logLevel: 'ALL',
 };

@@ -9,7 +9,9 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -24,6 +26,9 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "prettier/prettier": ["error", {
+            "endOfLine":"auto"
+          }],
         "no-console": 2,
         "@typescript-eslint/adjacent-overload-signatures": 2,
         "@typescript-eslint/array-type": 2,

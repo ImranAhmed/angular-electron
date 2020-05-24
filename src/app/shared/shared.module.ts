@@ -7,12 +7,9 @@ import { LoggingService } from './services';
 import { ElectronService } from './services/electron/electron.service';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, FormsModule],
-  declarations: [],
-  providers: [
-    ElectronService,
-    LoggingService
-  ],
-  exports: [TranslateModule, FormsModule]
+    imports: [CommonModule, TranslateModule, FormsModule],
+    declarations: [],
+    providers: [ElectronService, LoggingService],
+    exports: [TranslateModule, FormsModule],
 })
-export class SharedModule { }
+export class SharedModule {}
