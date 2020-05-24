@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "rbbit.typescript-hero",
     "steoates.autoimport",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode"

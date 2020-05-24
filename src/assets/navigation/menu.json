@@ -1,0 +1,82 @@
+[
+    {
+        "appName": "App A",
+        "id": "app-a",
+        "icon": "objects",
+        "href": "",
+        "navigation": [
+            {
+                "name": "Section A",
+                "id": "section-a",
+                "icon": "account_balance",
+                "href": "",
+                "children": [
+                    {
+                        "name": "Section A1",
+                        "id": "section-a1",
+                        "href": "section-a1"
+                    },
+                    {
+                        "name": "Section A2",
+                        "id": "section-a2",
+                        "href": ""
+                    }
+                ]
+            },
+            {
+                "name": "Section B",
+                "id": "section-b",
+                "icon": "bar_chart",
+                "href": "",
+                "children": [
+                    {
+                        "name": "Section B1",
+                        "id": "section-b1",
+                        "href": ""
+                    },
+                    {
+                        "name": "Section B2",
+                        "id": "section-b2",
+                        "href": ""
+                    }
+                ]
+            },
+            {
+                "name": "Section C",
+                "id": "section-c",
+                "icon": "bubble_chart",
+                "href": "",
+                "children": [
+                    {
+                        "name": "Section C1",
+                        "id": "section-c1",
+                        "href": ""
+                    },
+                    {
+                        "name": "Section C2",
+                        "id": "section-c2",
+                        "href": ""
+                    }
+                ]
+            },
+            {
+                "name": "Section D",
+                "id": "section-d",
+                "icon": "pie_chart",
+                "href": "",
+                "children": [
+                    {
+                        "name": "Section D1",
+                        "id": "section-d1",
+                        "href": ""
+                    },
+                    {
+                        "name": "Section D2",
+                        "id": "section-d2",
+                        "href": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
