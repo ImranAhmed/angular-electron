@@ -29,7 +29,8 @@
                         "styles": [
                             "node_modules/@clr/icons/clr-icons.min.css",
                             "node_modules/@clr/ui/clr-ui.min.css",
-                            "src/styles/styles.scss"
+                            "src/styles/styles.scss",
+                            "src/styles/clarity/custom.css"
                         ],
                         "scripts": [
                             "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
