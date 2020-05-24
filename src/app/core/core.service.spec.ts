@@ -54,7 +54,7 @@ describe('CoreService', () => {
             [CoreService, HttpTestingController],
             (coreSvc: CoreService, mockBackend: HttpTestingController) => {
                 const mockResponse: User = {
-                    avatar: 'qb-image-profile-ab',
+                    avatar: 'app-image-profile-ab',
                     displayName: 'Alexis Besse',
                     clientCode: 'Qbridge',
                 } as User;

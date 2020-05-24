@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { application } from '../environments/application';
 import { environment } from '../environments/environment';
 import { CoreService } from './core/core.service';
 import { AppNavigation, User } from './shared/models';
@@ -10,6 +11,7 @@ import { ElectronService, LoggingService } from './shared/services';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
     navigationMenu: AppNavigation[];
@@ -33,6 +35,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.logger.info(this, 'ngOnInit');
+
+        this.version = application.version;
+
+        this.releaseDate = application.releaseDate;
+
         this.config();
         this.getData();
     }

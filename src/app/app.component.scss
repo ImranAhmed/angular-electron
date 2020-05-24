@@ -1,0 +1,36 @@
+@import 'colours';
+@import 'variables';
+
+clr-header.header-6,
+clr-dropdown-menu {
+    border-bottom: 3px solid $app-green;
+}
+
+.app-header-nav-icon {
+    vertical-align: bottom;
+    margin-right: $space-h-xs;
+}
+
+.app-header-nav-bug {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: $space-h-xs;
+}
+
+.app-side-nav-icon {
+    position: relative;
+    bottom: $space-h-xs;
+    right: $space-h-xs;
+}
+
+.app-dropdown-text {
+    cursor: unset !important;
+    font-size: small;
+
+}
+
+.app-dropdown-text:hover {
+    background-color: unset !important;
+
+}
