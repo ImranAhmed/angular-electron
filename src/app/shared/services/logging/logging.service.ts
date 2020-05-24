@@ -3,7 +3,7 @@
 import { Injectable } from '@angular/core';
 
 import { application } from '../../../../environments/application';
-import { AppConfig } from '../../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { ClassUtilities } from '../../helpers/class-utilities';
 
 const getLogLevel = (logLevel: string): number => {
@@ -92,7 +92,7 @@ export class LoggingService implements LoggingServiceInterface {
                 location.href
             })`;
         }
-        const logLevel = getLogLevel(AppConfig.logLevel);
+        const logLevel = getLogLevel(environment.logLevel);
         if (logLevel === 0 || level < logLevel) {
             return;
         }

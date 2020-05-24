@@ -1,5 +1,5 @@
-export const AppConfig = {
-  production: true,
-  environment: 'PROD',
-  logLevel: 'ERROR'
+export const environment = {
+    production: true,
+    environment: 'PROD',
+    logLevel: 'ERROR',
 };

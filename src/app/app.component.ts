@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { AppConfig } from '../environments/environment';
+import { environment } from '../environments/environment';
 import { ElectronService, LoggingService } from './shared/services';
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent {
 
     private config(): void {
         this.translate.setDefaultLang('en');
-        this.logger.info(this, `AppConfig:${JSON.stringify(AppConfig)}`);
+        this.logger.info(this, `environment:${JSON.stringify(environment)}`);
 
         if (this.electronService.isElectron) {
             this.logger.info(this, 'Mode electron');
