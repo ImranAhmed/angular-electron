@@ -1,19 +1,17 @@
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
 
-Ported from: https://github.com/maximegris/angular-electron.git
-
 # Introduction
 
 Bootstrap and package your project with Angular 9, Electron 9 NgRx for state management and Clarity Design (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
 
 Currently runs with:
 
-- [Angular v9.1.4](https://angular.io/)
-- [Electron v9.0.0](https://www.electronjs.org/)
-- [Electron Builder v22.6.0](https://www.electron.build/)
-- [NgRx ^9.1.2](https://ngrx.io/)
-- [Clarity Design ^v3.1.3](https://clarity.design/)
-- [Angular Flex Layout ^9.0.0-beta.31](https://github.com/angular/flex-layout)
+- [Angular](https://angular.io/) (v9.1.4)
+- [Electron](https://www.electronjs.org/) (v9.0.0)
+- [Electron Builder](https://www.electron.build/) (v22.6.0)
+- [NgRx](https://ngrx.io/) (^v9.1.2)
+- [Clarity Design](https://clarity.design/) (^v3.1.3)
+- [Angular Flex Layout](https://github.com/angular/flex-layout) (^v9.0.0-beta.31)
 
 With this sample, you can :
 
@@ -84,16 +82,5 @@ Maybe you want to execute the application in the browser with hot reload ? Just 
 
 ## Branch & Packages version
 
-- Angular 9 & Electron 8 : (master)
-
-[license-badge]: https://img.shields.io/badge/license-Apache2-blue.svg?style=style=flat-square
-[license]: https://github.com/maximegris/angular-electron/blob/master/LICENSE.md
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-[prs]: http://makeapullrequest.com
-[github-watch-badge]: https://img.shields.io/github/watchers/maximegris/angular-electron.svg?style=social
-[github-watch]: https://github.com/maximegris/angular-electron/watchers
-[github-star-badge]: https://img.shields.io/github/stars/maximegris/angular-electron.svg?style=social
-[github-star]: https://github.com/maximegris/angular-electron/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20angular-electron!%20https://github.com/maximegris/angular-electron%20%F0%9F%91%8D
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/maximegris/angular-electron.svg?style=social
-[maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
+- [master](https://github.com/ImranAhmed/angular-electron)
+- [original](https://github.com/maximegris/angular-electron.git)
