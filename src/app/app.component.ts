@@ -7,7 +7,7 @@ import { application } from '../environments/application';
 import { environment } from '../environments/environment';
 import { AppNavigation } from './shared/models';
 import { User } from './shared/models/user';
-import { CoreService, ElectronService, LoggingService } from './shared/services';
+import { ElectronService, LoggingService, NavigationService } from './shared/services';
 import { GetUser } from './store/actions/user.actions';
 import { selectUser } from './store/selectors/user.selector';
 import { AppState } from './store/state/app.state';
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
         public electronSvc: ElectronService,
         private readonly translate: TranslateService,
         private readonly logger: LoggingService,
-        private readonly coreSvc: CoreService,
+        private readonly navSvc: NavigationService,
         private readonly store: Store<AppState>
     ) {}
 
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit, OnDestroy {
     getData(): void {
         this.logger.info(this, 'getData');
 
-        this.coreSvc
+        this.navSvc
             .getNavigationMenu()
             .pipe(takeUntil(this.unsubscribe))
             .subscribe(

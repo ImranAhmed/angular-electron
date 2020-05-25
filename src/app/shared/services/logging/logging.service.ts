@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint no-console: 0 */
 import { Injectable } from '@angular/core';
-
 import { application } from '../../../../environments/application';
 import { environment } from '../../../../environments/environment';
 import { ClassUtilities } from '../../helpers/class-utilities';
@@ -35,7 +34,9 @@ export interface LoggingServiceInterface {
     fatal(logObject: object, e?: any): void;
 }
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class LoggingService implements LoggingServiceInterface {
     debugLevel: number;
     infoLevel: number;
