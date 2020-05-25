@@ -32,4 +32,12 @@ describe('DetailComponent', () => {
 
         expect(dirInstance.title).toBe('PAGES.DETAIL.TITLE');
     });
+
+    it('should contain button with link to home page', () => {
+        const btn = fixture.debugElement.query(By.css('button.btn.btn-sm.btn-outline')).nativeElement;
+
+        expect(fixture.nativeElement.querySelectorAll('button.btn.btn-sm.btn-outline').length).toEqual(1);
+        expect(btn.getAttribute('routerLink')).toEqual('/');
+        expect(btn.innerText).toEqual('PAGES.DETAIL.BACK_TO_HOME');
+    });
 });
