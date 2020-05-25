@@ -2,7 +2,7 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 9, Electron 9 NgRx for state management and Clarity Design (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
+Bootstrap and package your project with Angular 9, Electron 9, NgRx for state management and Clarity Design (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
 
 Currently runs with:
 
