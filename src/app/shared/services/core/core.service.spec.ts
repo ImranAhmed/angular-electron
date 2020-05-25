@@ -1,7 +1,7 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { inject, TestBed } from '@angular/core/testing';
-import { AppNavigation, User } from '../shared/models';
-import { LoggingMockService, LoggingService } from '../shared/services';
+import { AppNavigation, User } from '../../models';
+import { LoggingMockService, LoggingService } from '../../services';
 import { CoreService } from './core.service';
 
 describe('CoreService', () => {

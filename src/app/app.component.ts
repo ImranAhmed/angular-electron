@@ -4,9 +4,8 @@ import { forkJoin, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { application } from '../environments/application';
 import { environment } from '../environments/environment';
-import { CoreService } from './core/core.service';
 import { AppNavigation, User } from './shared/models';
-import { ElectronService, LoggingService } from './shared/services';
+import { CoreService, ElectronService, LoggingService } from './shared/services';
 
 @Component({
     selector: 'app-root',

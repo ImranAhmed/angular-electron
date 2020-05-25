@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AppNavigation } from '../shared/models';
-import { User } from './../shared/models/user';
-import { LoggingService } from './../shared/services/logging/logging.service';
+import { AppNavigation, User } from '../../models';
+import { LoggingService } from '../../services';
 
 @Injectable({
     providedIn: 'root',

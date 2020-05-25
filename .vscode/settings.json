@@ -1,6 +1,5 @@
 {
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "typescriptHero.imports.organizeOnSave": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "search.exclude": {
         "**/.vscode": true,
