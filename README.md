@@ -4,12 +4,13 @@ Ported from: https://github.com/maximegris/angular-electron.git
 
 # Introduction
 
-Bootstrap and package your project with Angular 9 and Electron 9 (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
+Bootstrap and package your project with Angular 9 and Electron 9 and Clarity Design (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
 
 Currently runs with:
 
 - Angular v9.1.4
 - Electron v9.0.0
+- Clarity Design ^v3.1.3
 - Electron Builder v22.6.0
 
 With this sample, you can :
