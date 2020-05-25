@@ -18,6 +18,8 @@ import { HomeModule } from './home/home.module';
 import { ngrxRuntimeChecks } from './shared/helpers/store-constants';
 import { metaReducers } from './shared/services/logging/store-logger';
 import { SharedModule } from './shared/shared.module';
+import { UserEffect } from './store/effects/user.effects';
+import { appReducer } from './store/reducers/app.reducer';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,17 +45,14 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
                 deps: [HttpClient],
             },
         }),
-        StoreModule.forRoot(
-            {},
-            {
-                metaReducers,
-                runtimeChecks: {
-                    ...ngrxRuntimeChecks,
-                },
-            }
-        ),
+        StoreModule.forRoot(appReducer, {
+            metaReducers,
+            runtimeChecks: {
+                ...ngrxRuntimeChecks,
+            },
+        }),
         StoreDevtoolsModule.instrument(),
-        EffectsModule.forRoot([]),
+        EffectsModule.forRoot([UserEffect]),
     ],
     providers: [],
     bootstrap: [AppComponent],

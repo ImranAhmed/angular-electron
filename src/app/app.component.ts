@@ -1,11 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { forkJoin, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { application } from '../environments/application';
 import { environment } from '../environments/environment';
-import { AppNavigation, User } from './shared/models';
+import { AppNavigation } from './shared/models';
+import { User } from './shared/models/user';
 import { CoreService, ElectronService, LoggingService } from './shared/services';
+import { GetUser } from './store/actions/user.actions';
+import { selectUser } from './store/selectors/user.selector';
+import { AppState } from './store/state/app.state';
 
 @Component({
     selector: 'app-root',
@@ -18,10 +23,10 @@ export class AppComponent implements OnInit, OnDestroy {
     activeAppId: string;
     activeModuleId: string;
     activeUrl: string;
-    user: User;
     isLoading = true;
     version: string;
     releaseDate: string;
+    user: User;
 
     private readonly unsubscribe: Subject<void> = new Subject();
 
@@ -29,7 +34,8 @@ export class AppComponent implements OnInit, OnDestroy {
         public electronSvc: ElectronService,
         private readonly translate: TranslateService,
         private readonly logger: LoggingService,
-        private readonly coreSvc: CoreService
+        private readonly coreSvc: CoreService,
+        private readonly store: Store<AppState>
     ) {}
 
     ngOnInit(): void {
@@ -39,22 +45,32 @@ export class AppComponent implements OnInit, OnDestroy {
 
         this.releaseDate = application.releaseDate;
 
-        this.config();
+        this.configureLanguage();
+
+        this.configureStore();
+
         this.getData();
+    }
+
+    configureStore(): void {
+        this.logger.info(this, 'configureStore');
+
+        this.store.dispatch(new GetUser());
+
+        this.store.pipe(takeUntil(this.unsubscribe), select(selectUser)).subscribe((user: User) => {
+            this.user = user;
+        });
     }
 
     getData(): void {
         this.logger.info(this, 'getData');
 
-        const getUser = this.coreSvc.getUser();
-        const getNavigationMenu = this.coreSvc.getNavigationMenu();
-
-        forkJoin([getNavigationMenu, getUser])
+        this.coreSvc
+            .getNavigationMenu()
             .pipe(takeUntil(this.unsubscribe))
             .subscribe(
                 (res) => {
-                    this.navigationMenu = res[0];
-                    this.user = res[1];
+                    this.navigationMenu = res;
 
                     this.activeApp = this.navigationMenu[0];
                     this.activeAppId = this.activeApp.id;
@@ -75,9 +91,12 @@ export class AppComponent implements OnInit, OnDestroy {
         this.unsubscribe.complete();
     }
 
-    private config(): void {
-        this.translate.setDefaultLang('en');
+    private configureLanguage(): void {
+        this.logger.info(this, 'configureLanguage');
+
         this.logger.info(this, `environment:${JSON.stringify(environment)}`);
+
+        this.translate.setDefaultLang('en');
 
         if (this.electronSvc.isElectron) {
             this.logger.info(this, 'Mode electron');

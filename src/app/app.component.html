@@ -1,70 +1,70 @@
-<clr-main-container class="main-container" *ngIf="user">
+<app-spinner [isLoading]="isLoading"></app-spinner>
 
+<clr-main-container class="main-container" *ngIf="!isLoading && user">
     <clr-header class="header-6">
-  
-      <div class="branding" fxHide fxShow.gt-xs>
-      </div>
-  
-      <div class="header-actions" fxHide fxShow.gt-xs>
-        <div class="avatar" [ngClass]="user.avatar"></div>
-        <clr-dropdown>
-          <button class="nav-text" clrDropdownTrigger>
-            {{user.displayName}} | {{user.clientCode}}
-            <clr-icon shape="caret down"></clr-icon>
-          </button>
-          <clr-dropdown-menu clrPosition="bottom-right">
-  
-            <button type="button" class="dropdown-item" clrDropdownItem>
-              <i class="material-icons app-header-nav-icon">
-                settings_applications
-              </i>
-              Settings
-            </button>
-  
-            <button type="button" class="dropdown-item" clrDropdownItem>
-              <i class="material-icons app-header-nav-icon">
-                exit_to_app
-              </i>
-              Log Out
-            </button>
-  
-            <div class="dropdown-divider"></div>
-  
-            <h4 class="dropdown-header">Application Details</h4>
-            <div class="dropdown-item app-dropdown-text">Version: {{version}}</div>
-            <div class="dropdown-item app-dropdown-text">Released: {{releaseDate}}</div>
-  
-          </clr-dropdown-menu>
-        </clr-dropdown>
-      </div>
-  
+        <div class="branding" fxHide fxShow.gt-xs></div>
+
+        <div class="header-actions" fxHide fxShow.gt-xs>
+            <div class="avatar" [ngClass]="user.avatar"></div>
+            <clr-dropdown>
+                <button class="nav-text" clrDropdownTrigger>
+                    {{ user.displayName }} | {{ user.clientCode }}
+                    <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <clr-dropdown-menu clrPosition="bottom-right">
+                    <button type="button" class="dropdown-item" clrDropdownItem>
+                        <i class="material-icons app-header-nav-icon">
+                            settings_applications
+                        </i>
+                        Settings
+                    </button>
+
+                    <button type="button" class="dropdown-item" clrDropdownItem>
+                        <i class="material-icons app-header-nav-icon">
+                            exit_to_app
+                        </i>
+                        Log Out
+                    </button>
+
+                    <div class="dropdown-divider"></div>
+
+                    <h4 class="dropdown-header">Application Details</h4>
+                    <div class="dropdown-item app-dropdown-text">Version: {{ version }}</div>
+                    <div class="dropdown-item app-dropdown-text">Released: {{ releaseDate }}</div>
+                </clr-dropdown-menu>
+            </clr-dropdown>
+        </div>
     </clr-header>
-  
+
     <div class="content-container" *ngIf="activeApp">
-  
-      <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom" [clr-nav-level]="1">
-  
-        <clr-vertical-nav-group [attr.title]="nav.name" [class.active]="nav.id === activeModuleId"
-                                *ngFor="let nav of activeApp.navigation">
-          <i class="material-icons app-side-nav-icon" clrVerticalNavIcon>
-            {{nav.icon}}
-          </i>
-          {{nav.name}}
-          <clr-vertical-nav-group-children>
-            <a [routerLink]="c.href" class="nav-link" [class.active]="c.href === activeUrl" *ngFor="let c of nav.children"
-               clrVerticalNavLink>
-              {{c.name}}
-            </a>
-          </clr-vertical-nav-group-children>
-        </clr-vertical-nav-group>
-      </clr-vertical-nav>
-  
-      <app-spinner [isLoading]="isLoading"></app-spinner>
-  
-      <main class="content-area" *ngIf="!isLoading">
-        <router-outlet></router-outlet>
-      </main>
-  
+        <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom" [clr-nav-level]="1">
+            <clr-vertical-nav-group
+                [attr.title]="nav.name"
+                [class.active]="nav.id === activeModuleId"
+                *ngFor="let nav of activeApp.navigation"
+            >
+                <i class="material-icons app-side-nav-icon" clrVerticalNavIcon>
+                    {{ nav.icon }}
+                </i>
+                {{ nav.name }}
+                <clr-vertical-nav-group-children>
+                    <a
+                        [routerLink]="c.href"
+                        class="nav-link"
+                        [class.active]="c.href === activeUrl"
+                        *ngFor="let c of nav.children"
+                        clrVerticalNavLink
+                    >
+                        {{ c.name }}
+                    </a>
+                </clr-vertical-nav-group-children>
+            </clr-vertical-nav-group>
+        </clr-vertical-nav>
+
+        <app-spinner [isLoading]="isLoading"></app-spinner>
+
+        <main class="content-area" *ngIf="!isLoading">
+            <router-outlet></router-outlet>
+        </main>
     </div>
-  
-  </clr-main-container>
+</clr-main-container>

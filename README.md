@@ -4,14 +4,16 @@ Ported from: https://github.com/maximegris/angular-electron.git
 
 # Introduction
 
-Bootstrap and package your project with Angular 9 and Electron 9 and Clarity Design (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
+Bootstrap and package your project with Angular 9, Electron 9 NgRx for state management and Clarity Design (Typescript + SASS + Hot Reload + Prettier) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v9.1.4
-- Electron v9.0.0
-- Clarity Design ^v3.1.3
-- Electron Builder v22.6.0
+- [Angular v9.1.4](https://angular.io/)
+- [Electron v9.0.0](https://www.electronjs.org/)
+- [Electron Builder v22.6.0](https://www.electron.build/)
+- [NgRx ^9.1.2](https://ngrx.io/)
+- [Clarity Design ^v3.1.3](https://clarity.design/)
+- [Angular Flex Layout ^9.0.0-beta.31](https://github.com/angular/flex-layout)
 
 With this sample, you can :
 
