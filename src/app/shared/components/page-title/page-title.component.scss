@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'colours';
+
+.app-page-title {
+    .app-title {
+        width: 150px;
+        border-top: 2px solid $app-teal;
+        h1 {
+            margin-top: 0px;
+        }
+    }
+}

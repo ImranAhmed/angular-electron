@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DetailComponent } from './detail.component';
-import { TranslateModule } from '@ngx-translate/core';
-
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { PageTitleComponent } from './../shared/components/page-title/page-title.component';
+import { DetailComponent } from './detail.component';
 
 describe('DetailComponent', () => {
     let component: DetailComponent;
@@ -11,7 +11,7 @@ describe('DetailComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [DetailComponent],
+            declarations: [DetailComponent, PageTitleComponent],
             imports: [TranslateModule.forRoot(), RouterTestingModule],
         }).compileComponents();
     }));
@@ -26,8 +26,10 @@ describe('DetailComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should render title in a h1 tag', async(() => {
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('h1').textContent).toContain('PAGES.DETAIL.TITLE');
-    }));
+    it('should set title', () => {
+        const dir = fixture.debugElement.query(By.directive(PageTitleComponent));
+        const dirInstance = dir.injector.get(PageTitleComponent);
+
+        expect(dirInstance.title).toBe('PAGES.DETAIL.TITLE');
+    });
 });

@@ -1,36 +1,36 @@
 {
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "typescriptHero.imports.organizeOnSave": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "search.exclude": {
-    "**/.vscode": true,
-    "**/dist": true,
-    "**/node_modules": true
-  },
-  "eslint.validate": [
-    "typescript",
-    "javascript"
-  ],
-  "editor.codeActionsOnSaveTimeout": 1500,
-  "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
-  },
-  "editor.formatOnSave": false,
-  "javascript.implicitProjectConfig.experimentalDecorators": true
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "typescriptHero.imports.organizeOnSave": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "search.exclude": {
+        "**/.vscode": true,
+        "**/dist": true,
+        "**/node_modules": true
+    },
+    "eslint.validate": ["typescript", "javascript"],
+    "editor.codeActionsOnSaveTimeout": 1500,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false,
+    "javascript.implicitProjectConfig.experimentalDecorators": true
 }
