@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import { of } from 'rxjs';
+import { Action } from '@ngrx/store';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { User } from './../../shared/models/user';
 import { UserService } from './../../shared/services';
@@ -9,7 +10,7 @@ import { GetUser, GetUserSuccess, UserActionTypes } from './../actions/user.acti
 @Injectable()
 export class UserEffect {
     @Effect()
-    getUser$ = this.actions.pipe(
+    getUser: Observable<Action> = this.actions.pipe(
         ofType<GetUser>(UserActionTypes.GetUser),
         switchMap(() => this.userSvc.getUser()),
         switchMap((user: User) => {

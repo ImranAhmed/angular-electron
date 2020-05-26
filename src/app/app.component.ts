@@ -32,7 +32,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     constructor(
         public electronSvc: ElectronService,
-        private readonly translate: TranslateService,
+        private readonly translateSvc: TranslateService,
         private readonly logger: LoggingService,
         private readonly navSvc: NavigationService,
         private readonly store: Store<AppState>
@@ -96,7 +96,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
         this.logger.info(this, `environment:${JSON.stringify(environment)}`);
 
-        this.translate.setDefaultLang('en');
+        this.translateSvc.setDefaultLang('en');
 
         if (this.electronSvc.isElectron) {
             this.logger.info(this, 'Mode electron');
