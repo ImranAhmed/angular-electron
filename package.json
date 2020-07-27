@@ -59,6 +59,9 @@
         "@types/node": "12.11.1",
         "@typescript-eslint/eslint-plugin": "2.27.0",
         "@typescript-eslint/parser": "2.27.0",
+        "ag-grid-angular": "^23.2.1",
+        "ag-grid-community": "^23.2.1",
+        "ag-grid-enterprise": "^23.2.1",
         "chai": "4.2.0",
         "codelyzer": "5.2.2",
         "core-js": "3.6.5",
@@ -104,5 +107,6 @@
         "*.{ts}": [
             "eslint --fix"
         ]
-    }
+    },
+    "dependencies": {}
 }
